@@ -1,0 +1,6 @@
+{
+  "name": "PLAYPOP - 3D Toy & Gaming Universe",
+  "description": "3D vinyl toy collectible and playful gaming landing page featuring tactile volumetric UI, vibrant pink aesthetic, and collectible figures.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

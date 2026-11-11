@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-cyan-primary: #0897B4;
+    --color-cyan-dark: #077990;
+    --color-blue-turquoise: #24ACD0;
+    --color-yellow-bright: #FFCA05;
+    --color-yellow-shadow: #CC9E00;
+    --color-white-warm: #F9F8F6;
+    --color-cyan-pastel: #B9E6EF;
+    --color-peach: #F4B77B;
+    --color-black-warm: #25251E;
+  }
+
+  body {
+    background-color: var(--color-white-warm);
+    color: var(--color-black-warm);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Orbitron', 'Outfit', sans-serif;
+  }
+}
+
+/* 3D Toy Button Volumetric Effects */
+.btn-toy-yellow {
+  background-color: #FFCA05;
+  color: #25251E;
+  font-weight: 800;
+  box-shadow: 0 6px 0 #C99E00, 0 12px 24px rgba(8, 151, 180, 0.3);
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(0);
+}
+
+.btn-toy-yellow:hover {
+  background-color: #FFD426;
+  box-shadow: 0 8px 0 #C99E00, 0 16px 28px rgba(8, 151, 180, 0.35);
+  transform: translateY(-2px);
+}
+
+.btn-toy-yellow:active {
+  box-shadow: 0 2px 0 #C99E00, 0 4px 10px rgba(8, 151, 180, 0.25);
+  transform: translateY(4px);
+}
+
+/* Circular yellow button with 3D tactile bevel */
+.btn-toy-circle {
+  background: radial-gradient(circle at 35% 30%, #FFE566, #FFCA05 60%, #E0AE00 100%);
+  color: #25251E;
+  box-shadow: 0 5px 0 #B88E00, 0 8px 18px rgba(0, 0, 0, 0.2);
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-toy-circle:hover {
+  transform: translateY(-2px) scale(1.06);
+  box-shadow: 0 7px 0 #B88E00, 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+.btn-toy-circle:active {
+  transform: translateY(3px) scale(0.96);
+  box-shadow: 0 2px 0 #B88E00, 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 3D Floating Animations */
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(1.5deg);
+  }
+}
+
+@keyframes float-reverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(-2deg);
+  }
+}
+
+@keyframes pulse-soft {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 4.5s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: float-reverse 5s ease-in-out infinite;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 3.5s ease-in-out infinite;
+}
